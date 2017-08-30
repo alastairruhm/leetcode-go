@@ -1,13 +1,13 @@
 language: go
 go:
- - 1.8
- - 1.9
-
+- 1.8
+- 1.9
 script:
- - go test -v ./...
-
+- go test -v ./...
 notifications:
-  slack: ruhm-pacino:vcSqblVd1vSDgaOzWLNbThfS
+  slack:
+    matrix:
+    - ruhm-pacino:vcSqblVd1vSDgaOzWLNbThfS
+    rooms:
+      secure: MFcBuCnXHhFcxYYqLB6zjZMUMGTRF8svChmQHe86qu6i+GtCE52JsJQExr+8DHEnXPuow4LkUtq4iYv4+mhDzbsXB2g/zrs+O4ZnfdlyxNlEUQVxM2vqixQsbLpzDDyW8ijrEmwzzl8S49/ihfZtI4Dj0n1sKy8OkYi8u2AmTqSycn3feJOzv5uZs3CgvQ1hTLTmWh5AfmjKWZlejAC4hIrcoAmtGJC8iyvRyMleYqbPJ2Kn2PZnGTJ0Le9/xx36BZa5JoeYyNQNSesUsFAPoFYR/0SSphNsP/ABy/xN/PikiODbgiH7xuW682dR4VW5xXE9kHYztuwCO+e4O40MAP67OyD78+DIM+U7jNhqsMs0YqBPtpWpcdezdjj7j0URqS+f0ssjRrj3rzbzU1ewMKAR3bWn/d0TbrNjffnC/oCULyVry0jtVLQqrhWd13qhVOJcXDaix/sbv0EfBgLnek8ziH2ik44sRb8KKA0c4+4r9bT/LBMRRtXc+zZORuCVdbd4WUn4X3yUFUwq6JPlf85/hGxQoMafmtaCvUsbQsDS/liq2mhnQB9/HFuwDPj5WW03s/a2jkcsE+Pi28iG2fLZhQaFJPPTAdvM835PWYpa/7S9OfHca6KdGZugjcQQ49MV7UW8y8KJ7nYZyYTPcfa9uJKX2YmcIOsNOBViuug=
 
-env:
-  secure: qSFNlEx1zdct2pLLbI7e9BaIdrQR04MROemZ2Gquv88W2SSppV1hsk3injVRM0sYpibWpn56ghoZQDD6f/Tc9g0ii4Un+FPdtxJzqV9SusbX/NikW2b5s/OG9ye6EBnCJe//gbyZnnSXLNdQrNHr8pjJAQnyNeqT+T35McQ1u//SQU6HBLpeccDoAXgkvMi1YaWxEIy4YCAm3kCWkkML9a0BYQB6n5Xjwumt9uC3Ki7ASeMU5hUw5s1n9yF9m7+i30Yy/xotfSXYGMQcar1WNq2w6Eq1KoHNZXUz+xKhNzlCOjDTkDz3C6xIUzHePoNsd+jJBXI5DWJ0UGZGF14OSawJC7BQTdEiiz0h5liKlqop90zspcQti6U/SXOiJBoFRrDNxQgHTe8G6jypHjrljGBGvgCiBCjg1csgDbMxvqeqEdANQlLtC5v1ut0JiWG9V7U7F3lWuzOdTWeeK8dfUjqXlhz+nMhmCpWDTPQebdWrDN1AF4WnJNM1mpXrZn7N8vhWY1B8IapRgo3H8IdvQ/T+FpOOK+NWiXHovSywy484sku1TA7Mv36d0YrO/hj+CsZmMAoFm7eIFui+T9MismPFjBJ8lC6VcwAwbAdQ2ut3xKFu8+3wChsfMAuk8kR4X/wHaNCsYg4038RxSSs3Il2aEUaY+WtPoXcLer4wr8k=
