@@ -1,4 +1,4 @@
-package main
+package twoSum
 
 func twoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ {
