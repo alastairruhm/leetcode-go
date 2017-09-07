@@ -15,3 +15,4 @@ func benchmarkReverseInteger(reverseInteger func(int) int, b *testing.B) {
 
 func BenchmarkReverse(b *testing.B)              { benchmarkReverseInteger(reverse, b) }
 func BenchmarkReverseWithGoroutine(b *testing.B) { benchmarkReverseInteger(reverseWithGoroutine, b) }
+func BenchmarkReverseIn3msSolution(b *testing.B) { benchmarkReverseInteger(reverseIn3msSolution, b) }

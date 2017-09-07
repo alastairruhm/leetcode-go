@@ -2,10 +2,13 @@ package reverseInteger
 
 import (
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestReverse(t *testing.T) {
-	var addTwoTests = []struct {
+	assert := assert.New(t)
+	var cases = []struct {
 		input    int
 		expected int
 	}{
@@ -14,16 +17,15 @@ func TestReverse(t *testing.T) {
 		{1000000003, 0},
 	}
 
-	for _, tt := range addTwoTests {
-		if result := reverse(tt.input); result != tt.expected {
-			t.Fatalf("should be %v, but is:%v\n", tt.expected, result)
-		}
+	for _, tt := range cases {
+		assert.Equal(reverse(tt.input), tt.expected)
 	}
 
 }
 
 func TestReverseWithGoroutine(t *testing.T) {
-	var addTwoTests = []struct {
+	assert := assert.New(t)
+	var cases = []struct {
 		input    int
 		expected int
 	}{
@@ -32,10 +34,23 @@ func TestReverseWithGoroutine(t *testing.T) {
 		{1000000003, 0},
 	}
 
-	for _, tt := range addTwoTests {
-		if result := reverseWithGoroutine(tt.input); result != tt.expected {
-			t.Fatalf("should be %v, but is:%v\n", tt.expected, result)
-		}
+	for _, tt := range cases {
+		assert.Equal(reverseWithGoroutine(tt.input), tt.expected)
+	}
+}
+
+func TestReverseIn3msSolution(t *testing.T) {
+	assert := assert.New(t)
+	var cases = []struct {
+		input    int
+		expected int
+	}{
+		{123, 321},
+		{-123, -321},
+		{1000000003, 0},
 	}
 
+	for _, tt := range cases {
+		assert.Equal(reverseIn3msSolution(tt.input), tt.expected)
+	}
 }

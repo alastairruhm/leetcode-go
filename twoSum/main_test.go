@@ -3,19 +3,12 @@ package twoSum
 import (
 	"testing"
 
-	. "gopkg.in/check.v1"
+	"github.com/stretchr/testify/assert"
 )
 
-// Hook up gocheck into the "go test" runner.
-func Test(t *testing.T) { TestingT(t) }
+func TestAddTwo(t *testing.T) {
 
-type TestSuite struct{}
-
-var _ = Suite(&TestSuite{})
-
-func (s *TestSuite) TestAddTwo(c *C) {
-
-	var addTwoTests = []struct {
+	var cases = []struct {
 		nums     []int
 		target   int
 		expected []int
@@ -25,8 +18,8 @@ func (s *TestSuite) TestAddTwo(c *C) {
 		{[]int{1, 2, 3}, 9, []int{0, 0}},
 	}
 
-	for _, tt := range addTwoTests {
+	for _, tt := range cases {
 		result := twoSum(tt.nums, tt.target)
-		c.Check(result, DeepEquals, tt.expected)
+		assert.ObjectsAreEqualValues(result, tt.expected)
 	}
 }
