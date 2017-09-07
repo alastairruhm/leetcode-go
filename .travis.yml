@@ -5,12 +5,14 @@ go:
 
 before_install:
   - go get -t -v ./...
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/mattn/goveralls
 
 script:
-  - ./runtest.sh
+  - goveralls -service=travis-ci
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
