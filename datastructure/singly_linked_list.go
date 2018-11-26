@@ -13,12 +13,16 @@ type ListNode struct {
 
 // GenSinglylinkedList generates singly-linked list
 func GenSinglylinkedList(vals []int) *ListNode {
-	var head *ListNode
-	for i := len(vals) - 1; i >= 0; i-- {
-		head := &ListNode{
-			Val:  vals[len(vals)-1],
-			Next: nil,
-		}
+	if len(vals) == 0 {
+		return &ListNode{}
+	}
+
+	head := &ListNode{
+		Val:  vals[len(vals)-1],
+		Next: nil,
+	}
+
+	for i := len(vals) - 2; i >= 0; i-- {
 		n := &ListNode{vals[i], nil}
 		n.Next = head
 		head = n
