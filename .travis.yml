@@ -13,7 +13,8 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 notifications:
+  webhooks: https://hook.bearychat.com/=bw9fx/travis/eb3ebc2ceea69eaf072cdb27d68cf279
   email:
     recipients:
     - alastairruhm@gmail.com
-
+  
