@@ -13,31 +13,55 @@ func isPalindrome(head *ListNode) bool {
 		return true
 	}
 
-	var prev *ListNode
 	slow := head
-	fast := head
+	fast := head.Next
 
+	// 确定中点
 	for fast != nil && fast.Next != nil {
-		// 快指针每次走2格，
 		fast = fast.Next.Next
-		// 慢指针每次走1格
-		next := slow.Next
-		// 翻转
-		slow.Next = prev
-		prev = slow
-		slow = next
-	}
-
-	if fast != nil {
 		slow = slow.Next
 	}
+	cur := slow.Next
+	slow.Next = nil
+	var temp *ListNode
 
-	for slow != nil {
-		if slow.Val != prev.Val {
+	// 反转后半链表
+	for cur != nil {
+		q := cur.Next
+		// 反转链表
+		cur.Next = temp
+
+		temp = cur
+		// 向前遍历
+		cur = q
+	}
+
+	// 前半链表和后半链表比较
+	for temp != nil && head != nil { // 不需要管链表元素是奇数还是偶数
+		if temp.Val != head.Val {
 			return false
 		}
-		slow = slow.Next
-		prev = prev.Next
+		temp = temp.Next
+		head = head.Next
 	}
+
 	return true
 }
+
+// FindMiddle 找到链表中点
+// 思路：利用快慢指针
+// func FindMiddle(head *ListNode) *ListNode {
+// 	if head == nil || head.Next == nil {
+// 		return head
+// 	}
+
+// 	slow := head
+// 	fast := head
+
+// 	for fast != nil && fast.Next != nil {
+// 		slow := slow.Next
+// 		fast := fast.Next.Next
+// 	}
+
+// 	return slow
+// }
