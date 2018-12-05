@@ -23,3 +23,8 @@ minStack.pop();
 minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 ```
+
+## 思路
+
+1. 入栈的元素包括两个值，一个是实际值，一个是当前栈内的最小值。
+2. 设计两个栈，一个栈保存实际值，一个栈保存最小值。
