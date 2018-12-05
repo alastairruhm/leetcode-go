@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/alastairruhm/leetcode.svg?branch=master)](https://travis-ci.org/alastairruhm/leetcode)
+[![Build Status](https://travis-ci.org/alastairruhm/leetcode-go.svg?branch=master)](https://travis-ci.org/alastairruhm/leetcode-go)
 [![codecov](https://codecov.io/gh/alastairruhm/leetcode-go/branch/master/graph/badge.svg)](https://codecov.io/gh/alastairruhm/leetcode-go)(https://coveralls.io/github/alastairruhm/leetcode)
 
 # leetcode
