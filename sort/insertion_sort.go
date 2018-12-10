@@ -1,9 +1,5 @@
 package sort
 
-import (
-	"fmt"
-)
-
 // InsertionSort 插入排序
 func InsertionSort(x []int) {
 	if len(x) <= 1 {
@@ -21,7 +17,7 @@ func InsertionSort(x []int) {
 			}
 			j--
 		}
-		fmt.Println(j)
+
 		x[j+1] = value
 	}
 }
