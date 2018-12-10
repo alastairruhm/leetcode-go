@@ -17,7 +17,7 @@ func BubbleSort(x []int) {
 			}
 		}
 
-		if !flag {
+		if !flag { // no swap, exit in advance
 			break
 		}
 
