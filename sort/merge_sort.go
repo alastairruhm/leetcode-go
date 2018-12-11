@@ -6,14 +6,14 @@ func MergeSort(a []int) {
 		return
 	}
 	temp := make([]int, len(a))
-	sort(a, 0, len(a)-1, temp)
+	mergesort(a, 0, len(a)-1, temp)
 }
 
-func sort(arr []int, left int, right int, temp []int) {
+func mergesort(arr []int, left int, right int, temp []int) {
 	if left < right {
 		mid := (left + right) / 2
-		sort(arr, left, mid, temp)         // 左边归并排序，使得左子序列有序
-		sort(arr, mid+1, right, temp)      // 右边归并排序，使得右子序列有序
+		mergesort(arr, left, mid, temp)    // 左边归并排序，使得左子序列有序
+		mergesort(arr, mid+1, right, temp) // 右边归并排序，使得右子序列有序
 		merge(arr, left, mid, right, temp) // //将两个有序子数组合并操作
 	}
 }
