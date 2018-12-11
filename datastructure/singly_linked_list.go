@@ -30,6 +30,29 @@ func GenSinglylinkedList(vals []int) *ListNode {
 	return head
 }
 
+func GenSinglylinkedListWithCycle(vals []int) *ListNode {
+	if len(vals) == 0 {
+		return &ListNode{}
+	}
+
+	tail := &ListNode{
+		Val:  vals[len(vals)-1],
+		Next: nil,
+	}
+
+	head := tail
+
+	for i := len(vals) - 2; i >= 0; i-- {
+		n := &ListNode{vals[i], nil}
+		n.Next = head
+		head = n
+	}
+
+	// cycle
+	tail.Next = head
+	return head
+}
+
 func (head *ListNode) String() string {
 	vals := []string{}
 	for head != nil {
